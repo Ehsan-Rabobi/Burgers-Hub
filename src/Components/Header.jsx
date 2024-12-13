@@ -1,9 +1,10 @@
 import { Box, Button, MenuItem, MenuList, Typography } from "@mui/material";
-import React from "react";
+import React, { createRef } from "react";
 import "boxicons";
 import headerImg from "../assets/images/hero-bg.jpg";
 
 export default function Header() {
+ 
   return (
     <>
       <Box position={"relative"} width={"100vw"} height={"100vh"}>
@@ -28,9 +29,10 @@ export default function Header() {
         >
           <Box width={"33%"}>
             <Typography
-              textAlign={"center"}
+              textAlign={""}
               fontFamily={"cursive"}
               variant="h4"
+              paddingLeft={9}
               sx={{ cursor: "pointer" }}
             >
               Logo
@@ -43,12 +45,30 @@ export default function Header() {
               justifyContent: "center",
             }}
           >
-            <MenuItem sx={{ fontSize: "14px", color: "#ffa600" }}>
+            <MenuItem
+              sx={{
+                fontSize: "14px",
+                color: "#ffa600",
+                "&:hover": { color: "#ffa600" },
+              }}
+            >
               HOME
             </MenuItem>
-            <MenuItem sx={{ fontSize: "14px" }}>MENU</MenuItem>
-            <MenuItem sx={{ fontSize: "14px" }}>ABOUT</MenuItem>
-            <MenuItem sx={{ fontSize: "14px" }}>BOOK TABLE</MenuItem>
+            <MenuItem
+              sx={{ fontSize: "14px", "&:hover": { color: "#ffa600" } }}
+            >
+              MENU
+            </MenuItem>
+            <MenuItem
+              sx={{ fontSize: "14px", "&:hover": { color: "#ffa600" } }}
+            >
+              ABOUT
+            </MenuItem>
+            <MenuItem
+              sx={{ fontSize: "14px", "&:hover": { color: "#ffa600" } }}
+            >
+              BOOK TABLE
+            </MenuItem>
           </MenuList>
           <Box
             display={"flex"}
@@ -91,7 +111,89 @@ export default function Header() {
             </Button>
           </Box>
         </Box>
-        <Box></Box>
+        <Box position={"absolute"} left={70} top={150} display={'flex'} >
+          <Box display={"flex"} flexDirection={"column"} gap={3} width={'1550px'}>
+            <Typography
+              variant="h4"
+              sx={{ color: "#ffffff", fontFamily: "cursive" }}
+            >
+              Fast Food Restaurant
+            </Typography>
+            <Typography color="white">
+              Doloremque, itaque aperiam facilis rerum, commodi, temporibus
+              sapiente ad <br /> mollitia laborum quam quisquam esse error unde.
+              Tempora ex doloremque, labore, <br /> sunt repellat dolore, iste
+              magni quos nihil ducimus libero ipsam.
+            </Typography>
+            <Box>
+              <Button
+                sx={{
+                  backgroundColor: "#ffa600",
+                  padding: "12px 26px",
+                  color: "white",
+                  borderRadius: "20px",
+                  fontWeight: "bold",
+                }}
+              >
+                Order Online
+              </Button>
+            </Box>
+          </Box>
+          <Box display={"flex"} flexDirection={"column"} gap={3} width={'1550px'}>
+            <Typography
+              variant="h4"
+              sx={{ color: "#ffffff", fontFamily: "cursive" }}
+            >
+              Fast Food 
+            </Typography>
+            <Typography color="white">
+              Doloremque, itaque aperiam facilis rerum, commodi, temporibus
+              sapiente ad <br /> mollitia laborum quam quisquam esse error unde.
+              Tempora ex doloremque, labore, <br /> sunt repellat dolore, iste
+              magni quos nihil ducimus libero ipsam.
+            </Typography>
+            <Box>
+              <Button
+                sx={{
+                  backgroundColor: "#ffa600",
+                  padding: "12px 26px",
+                  color: "white",
+                  borderRadius: "20px",
+                  fontWeight: "bold",
+                }}
+              >
+                Order Online
+              </Button>
+            </Box>
+          </Box>
+          <Box display={"flex"} flexDirection={"column"} gap={3} width={'1550px'}>
+            <Typography
+              variant="h4"
+              sx={{ color: "#ffffff", fontFamily: "cursive" }}
+            >
+              Fast Food Restaurant
+            </Typography>
+            <Typography color="white">
+              Doloremque, itaque aperiam facilis rerum, commodi, temporibus
+              sapiente ad <br /> mollitia laborum quam quisquam esse error unde.
+              Tempora ex doloremque, labore, <br /> sunt repellat dolore, iste
+              magni quos nihil ducimus libero ipsam.
+            </Typography>
+            <Box>
+              <Button
+                sx={{
+                  backgroundColor: "#ffa600",
+                  padding: "12px 26px",
+                  color: "white",
+                  borderRadius: "20px",
+                  fontWeight: "bold",
+                }}
+              >
+                Order Online
+              </Button>
+            </Box>
+          </Box>
+        </Box>
       </Box>
     </>
   );
