@@ -1,49 +1,94 @@
 import { Box, Button, MenuItem, MenuList, Typography } from "@mui/material";
 import React from "react";
 import "boxicons";
-import headerImg from '../assets/images/hero-bg.jpg'
+import headerImg from "../assets/images/hero-bg.jpg";
 
 export default function Header() {
   return (
     <>
-      <Box sx={{
-        backgroundImage:`${headerImg}`,
-        width:"100vw",
-        height:"100vh",
-        backgroundPosition:'center',
-        backgroundRepeat:"no-repeat",
-        backgroundSize:'cover'
-      }}>
+      <Box position={"relative"} width={"100vw"} height={"100vh"}>
+        <img
+          src={headerImg}
+          alt=""
+          width={"100%"}
+          height={"100%"}
+          style={{ objectFit: "cover" }}
+        />
         <Box
           width={"100%"}
-          height={"70px"}
-          bgcolor={"gray"}
+          height={"80px"}
           display={"flex"}
           alignItems={"center"}
-          justifyContent={"space-around"}
+          justifyContent={"center"}
+          gap={5}
+          position={"absolute"}
+          left={0}
+          top={0}
+          color={"white"}
         >
-          <Box>
-            <Typography fontFamily={"cursive"}>Logo</Typography>
+          <Box width={"33%"}>
+            <Typography
+              textAlign={"center"}
+              fontFamily={"cursive"}
+              variant="h4"
+              sx={{ cursor: "pointer" }}
+            >
+              Logo
+            </Typography>
           </Box>
-          <MenuList sx={{
-            display: "flex",
-          }}>
-            <MenuItem>HOME</MenuItem>
-            <MenuItem>MENU</MenuItem>
-            <MenuItem>ABOUT</MenuItem>
-            <MenuItem>BOOK TABLE</MenuItem>
+          <MenuList
+            sx={{
+              display: "flex",
+              width: "33%",
+              justifyContent: "center",
+            }}
+          >
+            <MenuItem sx={{ fontSize: "14px", color: "#ffa600" }}>
+              HOME
+            </MenuItem>
+            <MenuItem sx={{ fontSize: "14px" }}>MENU</MenuItem>
+            <MenuItem sx={{ fontSize: "14px" }}>ABOUT</MenuItem>
+            <MenuItem sx={{ fontSize: "14px" }}>BOOK TABLE</MenuItem>
           </MenuList>
-          <Box display={'flex'} alignItems={'center'}>
+          <Box
+            display={"flex"}
+            alignItems={"center"}
+            gap={2}
+            width={"33%"}
+            justifyContent={"center"}
+          >
             <Typography>
-              <box-icon type="solid" name="user"></box-icon>
+              <box-icon
+                type="solid"
+                name="user"
+                color="white"
+                style={{ cursor: "pointer" }}
+              ></box-icon>
             </Typography>
             <Typography>
-              <box-icon type="solid" name="cart"></box-icon>
+              <box-icon
+                type="solid"
+                name="cart"
+                color="white"
+                style={{ cursor: "pointer" }}
+              ></box-icon>
             </Typography>
             <Typography>
-              <box-icon name="search-alt-2"></box-icon>
+              <box-icon
+                name="search-alt-2"
+                color="white"
+                style={{ cursor: "pointer" }}
+              ></box-icon>
             </Typography>
-            <Button>Order Online</Button>
+            <Button
+              sx={{
+                backgroundColor: "#ffa600",
+                padding: "2px 6px",
+                color: "white",
+              }}
+            >
+              Order Online
+            </Button>
           </Box>
         </Box>
         <Box></Box>
