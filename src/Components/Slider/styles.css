@@ -1,0 +1,7 @@
+.card{
+    background-color: red;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 350px;
+}

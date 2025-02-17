@@ -1,12 +1,15 @@
 import React from 'react'
-import Header from './Components/Header'
-import Body from './Components/Body'
+import Navbar from './Components/Navbar'
+import { Route, Routes } from 'react-router-dom'
+import Home from './Pages/Home'
 
 export default function App() {
   return (
     <>
-      <Header/>
-      <Body/>
+      <Navbar/>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+      </Routes>
     </>
   )
 }
